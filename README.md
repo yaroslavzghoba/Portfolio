@@ -1,4 +1,4 @@
-# Портфоліо
+# Портфоліо (проект для коледжу)
 
 URL: https://yaroslavzghoba.github.io/Portfolio/
 
