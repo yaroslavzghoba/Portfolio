@@ -69,7 +69,7 @@ main {
     display: flex;
     flex-direction: column;
     padding: 36px 96px;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .block-headline {
@@ -107,18 +107,18 @@ main {
 
 #why-me-block {
     display: flex;
+    flex-wrap: wrap;
 }
 
 #achievements-block {
     display: grid;
-    height: 400px;
+    max-width: 550px;
     grid-template-columns: 50% 50%;
     background-color: hsla(0, 50%, 5%, 1);
 }
 
 .achievement {
     display: flex;
-    /* height: 200px; */
     justify-content: center;
     align-items: center;
     font-family: "Inter", sans-serif;
@@ -137,6 +137,8 @@ main {
     font-size: 40px;
     font-weight: 800;
     letter-spacing: 0.13em;
+    flex-grow: 1;
+    max-width: 550px;
 }
 
 .what-i-can-do-item {
