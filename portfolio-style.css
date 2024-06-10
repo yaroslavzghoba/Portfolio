@@ -3,21 +3,22 @@
 /*Merriweather font*/
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-* {
-    margin: 0px;
+:root {
+    --aside-width: 300px;
 }
 
-body {
-    display: flex;
+* {
+    margin: 0px;
 }
 
 
 
 /*Бічна панель навігації*/
 aside {
+    position: fixed;
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: var(--aside-width);
     height: 100vh;
     background-color: hsla(36, 99%, 56%, 1);
 }
@@ -62,7 +63,7 @@ aside {
 /*Головний блок та спільні компоненти*/
 main {
     background-image: linear-gradient(90deg, hsla(0, 0%, 96%, 1), hsla(0, 0%, 79%, 1));
-    flex-grow: 1;
+    margin-left: var(--aside-width);
 }
 
 .block {
@@ -147,4 +148,33 @@ main {
     font-size: 24px;
     font-weight: 500;
     letter-spacing: 0.13em;
+}
+
+.education-type-title {
+    width: 565px;
+    font-family: "Merriweather", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 0.21em;
+    text-align: center;
+    padding: 4px 8px;
+    background-color: hsla(36, 100%, 58%, 1);
+    color: white;
+}
+
+.education-items {
+    display: flex;
+}
+
+.education-item {
+    flex: 1;
+    min-width: 200px;
+    min-height: 160px;
+    border-left: 2px dashed black;
+    border-bottom: 2px dashed black;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 8px;
+    letter-spacing: 0.07em;
 }
