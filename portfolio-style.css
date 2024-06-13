@@ -29,6 +29,12 @@ aside {
     background-color: hsla(36, 99%, 56%, 1);
 }
 
+@media (max-width: 1200px) {
+    aside {
+        display: none;
+    }
+}
+
 #page-structure {
     display: flex;
     flex-direction: column;
@@ -74,6 +80,12 @@ main {
     margin-left: var(--aside-width);
 }
 
+@media (max-width: 1200px) {
+    main {
+        margin-left: 0px;
+    }
+}
+
 .block {
     display: flex;
     flex-direction: column;
@@ -117,6 +129,7 @@ main {
 #why-me-block {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #achievements-block {
@@ -175,6 +188,7 @@ main {
 
 .education-items {
     display: flex;
+    overflow: scroll;
 }
 
 .education-item {
@@ -226,8 +240,21 @@ main {
 #portfolio-items {
     display: grid;
     row-gap: 20px;
-    column-gap: 10%;
+    column-gap: 5%;
     grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 992px) {
+    #portfolio-items {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5%;
+    }
+}
+
+@media (max-width: 767px) {
+    #portfolio-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .portfolio-item {
@@ -311,7 +338,7 @@ main {
 .contact {
     display: flex;
     align-items: center;
-    margin: 0px 48px;
+    margin: 24px 48px;
 }
 
 .contact-value {
@@ -319,7 +346,7 @@ main {
     font-size: 32px;
     font-weight: 400;
     letter-spacing: 0.07em;
-    margin: 0px 24px;
+    margin: 0px 16px;
 }
 
 #thanks-for-watching {
@@ -328,5 +355,6 @@ main {
     font-weight: 600;
     letter-spacing: 0.07em;
     color: hsla(36, 100%, 50%, 1);
+    text-align: center;
     align-self: center;
 }
