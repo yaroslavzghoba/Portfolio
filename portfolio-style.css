@@ -17,6 +17,10 @@
     margin: 0px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 
 /*Бічна панель навігації*/
@@ -63,11 +67,20 @@ aside {
     background-color: hsla(36, 100%, 15%, 1);
 }
 
-.aside-destination {
+.unselected-dest {
     font-family: "Inter", sans-serif;
     font-size: 36px;
     font-weight: 900;
     color: hsla(36, 90%, 23%, 1);
+    user-select: none;
+    cursor: pointer;
+}
+
+.selected-dest {
+    font-family: "Inter", sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: hsla(36, 99%, 90%, 1);
     user-select: none;
     cursor: pointer;
 }
@@ -207,14 +220,14 @@ main {
 
 
 /*Блок портфоліо*/
-#portfolio-item-types-selector {
+#portfolio-tabs-selector {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-evenly;
 }
 
-.selected-portfolio-item-type {
+.selected-pf-tab {
     font-family: "Roboto", sans-serif;
     font-size: 32px;
     font-weight: 400;
@@ -226,7 +239,7 @@ main {
     cursor: pointer;
 }
 
-.unselected-portfolio-item-type {
+.unselected-pf-tab {
     font-family: "Roboto", sans-serif;
     font-size: 32px;
     font-weight: 400;
@@ -237,23 +250,45 @@ main {
     cursor: pointer;
 }
 
-#portfolio-items {
+.pf-layout16 {
     display: grid;
     row-gap: 20px;
-    column-gap: 5%;
+    column-gap: 12%;
     grid-template-columns: repeat(4, 1fr);
 }
 
 @media (max-width: 992px) {
-    #portfolio-items {
+    .pf-layout16 {
         grid-template-columns: repeat(3, 1fr);
         column-gap: 5%;
     }
 }
 
 @media (max-width: 767px) {
-    #portfolio-items {
+    .pf-layout16 {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.pf-layout4 {
+    display: grid;
+
+    row-gap: 5%;
+    column-gap: 20%; 
+    grid-template-columns: repeat(2, 350px);
+    justify-content: center;
+}
+
+@media (max-width: 992px) {
+    .pf-layout4 {
+        column-gap: 10%;
+    }
+}
+
+@media (max-width: 767px) {
+    .pf-layout4 {
+        grid-template-columns: 350px;
+        column-gap: 20px;
     }
 }
 

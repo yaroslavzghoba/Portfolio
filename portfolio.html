@@ -14,31 +14,31 @@
           <div class="aside-seperator-dot"></div>
           <div class="aside-seperator-line"></div>
         </div>
-        <p class="aside-destination">Резюме</p>
+        <p class="unselected-dest" id="resume-dest">Резюме</p>
         <div class="aside-seperator">
           <div class="aside-seperator-line"></div>
           <div class="aside-seperator-dot"></div>
           <div class="aside-seperator-line"></div>
         </div>
-        <p class="aside-destination">Освіта</p>
+        <p class="unselected-dest" id="education-dest">Освіта</p>
         <div class="aside-seperator">
           <div class="aside-seperator-line"></div>
           <div class="aside-seperator-dot"></div>
           <div class="aside-seperator-line"></div>
         </div>
-        <p class="aside-destination">Портфоліо</p>
+        <p class="unselected-dest" id="portfolio-dest">Портфоліо</p>
         <div class="aside-seperator">
           <div class="aside-seperator-line"></div>
           <div class="aside-seperator-dot"></div>
           <div class="aside-seperator-line"></div>
         </div>
-        <p class="aside-destination">Відгуки</p>
+        <p class="unselected-dest" id="reviews-dest">Відгуки</p>
         <div class="aside-seperator">
           <div class="aside-seperator-line"></div>
           <div class="aside-seperator-dot"></div>
           <div class="aside-seperator-line"></div>
         </div>
-        <p class="aside-destination">Контакти</p>
+        <p class="unselected-dest" id="contacts-dest">Контакти</p>
         <div class="aside-seperator">
           <div class="aside-seperator-line"></div>
           <div class="aside-seperator-dot"></div>
@@ -47,7 +47,7 @@
     </aside>
     <main>
       <!--Блок резюме-->
-      <div class="block">
+      <div class="block" id="resume-block">
         <div class="block-headline">РЕЗЮМЕ</div> 
         <div style="height: 36px;"></div>
         <p id="about-me">
@@ -84,7 +84,7 @@
         </div>
       </div> 
       <!--Блок освіти-->
-      <div class="block">
+      <div class="block" id="education-block">
         <div class="block-headline">ОСВІТА</div> 
         <div style="height: 48px;"></div>
         <h3 class="education-type-title">Навчальні заклади</h3>
@@ -104,33 +104,20 @@
         </div>
       </div> 
       <!--Блок портфоліо-->
-      <div class="block">
+      <div class="block" id="portfolio-block">
         <div class="block-headline">ПОРТФОЛІО</div> 
         <div style="height: 36px;"></div>
-        <div id="portfolio-item-types-selector">
-          <p class="selected-portfolio-item-type">ВСІ</p>
-          <p class="unselected-portfolio-item-type">ГРАФІЧНІ ДИЗАЙНИ</p>
-          <p class="unselected-portfolio-item-type">ФОТОГРАФІЇ</p>
-          <p class="unselected-portfolio-item-type">ВЕБ ДИЗАЙНИ</p>
+        <div id="portfolio-tabs-selector">
+          <p id="all-pf-tab" class="unselected-pf-tab">ВСІ</p>
+          <p id="graphic-design-pf-tab" class="unselected-pf-tab">ГРАФІЧНІ ДИЗАЙНИ</p>
+          <p id="photography-pf-tab" class="unselected-pf-tab">ФОТОГРАФІЇ</p>
+          <p id="web-design-pf-tab" class="unselected-pf-tab">ВЕБ ДИЗАЙНИ</p>
         </div>
         <div style="height: 36px;"></div>
-        <div id="portfolio-items">
-          <img src="resources/graphic_design_1.jpg" alt="Графічний дизайн 1" class="portfolio-item">
-          <img src="resources/graphic_design_2.jpg" alt="Графічний дизайн 2" class="portfolio-item">
-          <img src="resources/graphic_design_3.jpg" alt="Графічний дизайн 3" class="portfolio-item">
-          <img src="resources/graphic_design_4.jpg" alt="Графічний дизайн 4" class="portfolio-item">
-          <img src="resources/photography_1.jpg" alt="Фотографія 1" class="portfolio-item">
-          <img src="resources/photography_2.jpg" alt="Фотографія 2" class="portfolio-item">
-          <img src="resources/photography_3.jpg" alt="Фотографія 3" class="portfolio-item">
-          <img src="resources/photography_4.jpg" alt="Фотографія 4" class="portfolio-item">
-          <img src="resources/web_design_1.jpg" alt="Веб-дизайн 1" class="portfolio-item">
-          <img src="resources/web_design_2.jpg" alt="Веб-дизайн 2" class="portfolio-item">
-          <img src="resources/web_design_3.jpg" alt="Веб-дизайн 3" class="portfolio-item">
-          <img src="resources/web_design_4.jpg" alt="Веб-дизайн 4" class="portfolio-item">
-        </div>
+        <div id="pf-layout"></div>
       </div>
       <!--Блок відгуків-->
-      <div class="block">
+      <div class="block" id="reviews-block">
         <div class="block-headline">ВІДГУКИ</div> 
         <div style="height: 24px;"></div>
         <div id="reviews">
@@ -209,7 +196,7 @@
         </div>
       </div>
       <!--Блок контактів-->
-      <div class="block">
+      <div class="block" id="contacts-block">
         <div class="block-headline">КОНТАКТИ</div> 
         <div style="height: 64px;"></div>
         <p id="contact-me">Можете звязатись зі мною якщо я вас заінтересував по пошті або номеру телефону що вказані нижче</p>
@@ -234,5 +221,6 @@
         <p id="thanks-for-watching">Дякую за увагу</p>
       </div>
     </main>
+    <script src="portfolio-script.js"></script>
   </body>
 </html>
