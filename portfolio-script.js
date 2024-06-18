@@ -54,7 +54,11 @@ function updateSideBar() {
   // Отримати поточний блок
   const scrollY = window.scrollY; // Позиція скролу
   const blocks = blockIds.map((id) => document.getElementById(id));
-  const prevBlocks = blocks.filter((block) => getPosition(block).y <= scrollY);
+  // Усі блоки, які починаються до позиції скролу з врахуванням зміщення
+  const offset = window.screen.height / 2
+  const prevBlocks = blocks.filter(
+    (block) => getPosition(block).y <= scrollY + offset
+  );
   let currentBlock = prevBlocks
     .sort((a, b) => getPosition(a).y - getPosition(b).y)
     .slice(-1)[0];
