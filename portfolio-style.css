@@ -296,8 +296,15 @@ main {
     width: 100%;
     aspect-ratio: 270/185;
     object-fit: cover;
+    transition-duration: 300ms;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
 }
 
+.portfolio-item:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
 
 /*Блок портфоліо*/

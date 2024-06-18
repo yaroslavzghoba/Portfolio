@@ -120,7 +120,9 @@ function updatePortfolio(currentTabId) {
     pfItems = getFirstN(portfolioItems.filter((item) => item.tabId === currentTabId), 4);
   }
   pfItems.forEach(function (item) {
-    pfLayout.innerHTML += "<img src=\"" + item.src + "\" class=\"portfolio-item\">"
+    const onclick = "window.location.href = '" + item.src + "'"
+    const img = "<img src=\"" + item.src + "\" class=\"portfolio-item\" onclick=\"" + onclick + "\">"
+    pfLayout.innerHTML += img
   });
 }
 
